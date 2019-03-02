@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Layout, Menu, message } from 'antd';
+import { Layout, Menu } from 'antd';
 import Link from 'umi/link';
 import styles from './Header.less';
 
