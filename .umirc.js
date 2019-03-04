@@ -8,7 +8,7 @@ export default {
       antd: true,
       dva: false,
       dynamicImport: false,
-      title: 'personal-web-v2',
+      title: 'Hongtao Liu',
       dll: false,
       locale: {
         enable: true,
