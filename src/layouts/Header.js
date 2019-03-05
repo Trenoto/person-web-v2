@@ -10,35 +10,47 @@ class Header extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            navBarTextIsTransparent: false,
+            backGroundIsLight: false,
         }
         this.setNarBarTextStyle.bind(this);
     }
 
     setNarBarTextStyle() {
-        let backGroundColor = document.body.style.backGroundColor;
+        let backGroundColor = document.body.style.backgroundColor;
         if (backGroundColor === "rgb(255, 255, 255)") {
             this.setState({
-                navBarTextIsTransparent: false
+                backGroundIsLight: true
             });
         } else {
             this.setState({
-                navBarTextIsTransparent: true
+                backGroundIsLight: false
             });
         }
     }
+    
+        componentWillMount() {
+            this.setNarBarTextStyle();
+        }
 
     componentDidMount() {
         this.setNarBarTextStyle();
     }
+
+    componentWillUnmount() {
+        this.setNarBarTextStyle();
+    }
+
+    // componentDidMount() {
+    //     console.log("headerbgc" + document.body.style.backgroundColor);
+    // }
+
     render() {
         return (
             <AntHeader className={styles.header} >
                 <div className="logo" />
                 <Menu
                     mode="horizontal"
-                    defaultSelectedKeys={['2']}
-                    className={styles.menu}
+                    className={ this.state.backGroundIsLight ?  styles.menuTextDark : styles.menu }
                 >
                     <Menu.Item className={styles.navbarItemLeft} key="logo"><Link to="/"><img alt="logo" className={styles.logo} src={logo} /></Link></Menu.Item>
                     <Menu.Item className={styles.navbarItemRight} key="about"><Link to="/about">about</Link></Menu.Item>
