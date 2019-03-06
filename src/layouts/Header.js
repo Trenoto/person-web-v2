@@ -11,34 +11,39 @@ class Header extends Component {
         super(props);
         this.state = {
             backGroundIsLight: false,
+            path:  ''
         }
-        this.setNarBarTextStyle.bind(this);
+        // this.setNarBarTextStyle.bind(this);
+        console.log("header");
     }
 
-    setNarBarTextStyle() {
-        let backGroundColor = document.body.style.backgroundColor;
-        if (backGroundColor === "rgb(255, 255, 255)") {
-            this.setState({
-                backGroundIsLight: true
-            });
-        } else {
-            this.setState({
-                backGroundIsLight: false
-            });
-        }
-    }
-    
-        componentWillMount() {
-            this.setNarBarTextStyle();
-        }
+    // setNarBarTextStyle() {
+    //     console.log("header" + document.body.style.backgroundColor);
+    //     if (document.body.style.backgroundColor === "rgb(255, 255, 255)") {
+    //         this.setState({
+    //             backGroundIsLight: true
+    //         });
+    //     } else {
+    //         this.setState({
+    //             backGroundIsLight: false
+    //         });
+    //     }
+    // }
 
     componentDidMount() {
-        this.setNarBarTextStyle();
+        this.setState({
+            path: this.props.location.pathname
+        });
+        console.log("header1" + this.props.location.pathname);
     }
 
-    componentWillUnmount() {
-        this.setNarBarTextStyle();
-    }
+    // componentDidMount() {
+    //     this.setNarBarTextStyle();
+    // }
+
+    // componentWillUnmount() {
+    //     this.setNarBarTextStyle();
+    // }
 
     // componentDidMount() {
     //     console.log("headerbgc" + document.body.style.backgroundColor);
@@ -50,7 +55,7 @@ class Header extends Component {
                 <div className="logo" />
                 <Menu
                     mode="horizontal"
-                    className={ this.state.backGroundIsLight ?  styles.menuTextDark : styles.menu }
+                    className={this.state.backGroundIsLight ? styles.menuTextDark : styles.menu}
                 >
                     <Menu.Item className={styles.navbarItemLeft} key="logo"><Link to="/"><img alt="logo" className={styles.logo} src={logo} /></Link></Menu.Item>
                     <Menu.Item className={styles.navbarItemRight} key="about"><Link to="/about">about</Link></Menu.Item>
