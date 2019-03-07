@@ -4,7 +4,7 @@ import Header from '@/layouts/Header'
 function BasicLayout(props) {
   return (
     <div className={styles.normal}>
-    <Header />
+    <Header {...props}/>
       { props.children }
     </div>
   );
