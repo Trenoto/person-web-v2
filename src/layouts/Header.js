@@ -9,45 +9,7 @@ const AntHeader = Layout.Header;
 class Header extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-            backGroundIsLight: false,
-            path:  ''
-        }
-        // this.setNarBarTextStyle.bind(this);
-        console.log("header");
     }
-
-    // setNarBarTextStyle() {
-    //     console.log("header" + document.body.style.backgroundColor);
-    //     if (document.body.style.backgroundColor === "rgb(255, 255, 255)") {
-    //         this.setState({
-    //             backGroundIsLight: true
-    //         });
-    //     } else {
-    //         this.setState({
-    //             backGroundIsLight: false
-    //         });
-    //     }
-    // }
-
-    componentDidMount() {
-        this.setState({
-            path: this.props.location.pathname
-        });
-        console.log("header1" + this.props.location.pathname);
-    }
-
-    // componentDidMount() {
-    //     this.setNarBarTextStyle();
-    // }
-
-    // componentWillUnmount() {
-    //     this.setNarBarTextStyle();
-    // }
-
-    // componentDidMount() {
-    //     console.log("headerbgc" + document.body.style.backgroundColor);
-    // }
 
     render() {
         return (
@@ -55,7 +17,7 @@ class Header extends Component {
                 <div className="logo" />
                 <Menu
                     mode="horizontal"
-                    className={this.state.backGroundIsLight ? styles.menuTextDark : styles.menu}
+                    className={this.props.location.pathname === "/" ? styles.menu : styles.menuTextDark}
                 >
                     <Menu.Item className={styles.navbarItemLeft} key="logo"><Link to="/"><img alt="logo" className={styles.logo} src={logo} /></Link></Menu.Item>
                     <Menu.Item className={styles.navbarItemRight} key="about"><Link to="/about">about</Link></Menu.Item>
