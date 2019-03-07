@@ -1,12 +1,14 @@
-import styles from './index.css';
+import styles from './index.less';
 import Header from '@/layouts/Header'
+import { Layout } from 'antd';
+
 
 function BasicLayout(props) {
   return (
-    <div className={styles.normal}>
-    <Header {...props}/>
-      { props.children }
-    </div>
+    <Layout className={styles.layout}>
+      <Header {...props} />
+        {props.children}
+    </Layout>
   );
 }
 

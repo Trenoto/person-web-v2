@@ -7,6 +7,7 @@ import reactLogo from '../../assets/tech/react.png';
 import mysqlLogo from '../../assets/tech/mysql.png';
 
 const { Content } = Layout;
+const { Meta } = Card;
 
 export default class AboutPage extends Component {
   constructor(props) {

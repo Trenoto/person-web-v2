@@ -13,11 +13,11 @@ class Header extends Component {
 
     render() {
         return (
-            <AntHeader className={styles.header} >
+            <AntHeader className={this.props.location.pathname === "/" ? styles.header : styles.headerDark} >
                 <div className="logo" />
                 <Menu
                     mode="horizontal"
-                    className={this.props.location.pathname === "/" ? styles.menu : styles.menuTextDark}
+                    className={this.props.location.pathname === "/" ? styles.menu : styles.menuDark}
                 >
                     <Menu.Item className={styles.navbarItemLeft} key="logo"><Link to="/"><img alt="logo" className={styles.logo} src={logo} /></Link></Menu.Item>
                     <Menu.Item className={styles.navbarItemRight} key="about"><Link to="/about">about</Link></Menu.Item>
