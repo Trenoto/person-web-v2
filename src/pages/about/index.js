@@ -35,11 +35,11 @@ export default class AboutPage extends Component {
               <p style={{ textAlign: 'left', fontSize: '20px' }}>{formatMessage({ id: 'about.biography.interest.title' })}</p>
               <Row gutter={16}>
                 <Col span={6}>
-                  <Card bordered={true} cover={<img alt="spring" src={springLogo} />} style={{ padding: 40, height: 180 }}>
+                  <Card bordered={true} cover={<img alt="spring" src={springLogo} style={{ marginTop: 20}} />} style={{ padding: 40, height: 180 }}>
                   </Card>
                 </Col>
                 <Col span={6}>
-                  <Card bordered={true} cover={<img alt="react" src={reactLogo} />} style={{ padding: 40, height: 180 }}>
+                  <Card bordered={true} cover={<img alt="react" src={reactLogo} style={{ marginTop: 20}} />} style={{ padding: 40, height: 180 }}>
                   </Card>
                 </Col>
                 <Col span={6}>
