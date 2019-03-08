@@ -7,7 +7,7 @@ export default {
     ['umi-plugin-react', {
       antd: true,
       dva: false,
-      dynamicImport: false,
+      dynamicImport: true,
       title: 'Hongtao Liu',
       dll: false,
       locale: {
