@@ -13,6 +13,7 @@ export default {
       locale: {
         enable: true,
         default: 'en-US',
+        baseNavigator: true,
       },
       routes: [
       {
