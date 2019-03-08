@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Row, Col, Layout, Avatar, Icon, Card, Timeline } from 'antd';
+import { Row, Col, Avatar, Icon, Card, Timeline } from 'antd';
 import { formatMessage } from 'umi/locale';
 import styles from './index.less';
 import avater from '../../assets/avatar.png';
@@ -7,16 +7,7 @@ import springLogo from '../../assets/tech/spring.png';
 import reactLogo from '../../assets/tech/react.png';
 import mysqlLogo from '../../assets/tech/mysql.png';
 
-const { Content } = Layout;
-
 export default class AboutPage extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      backgroundColor: "rgb(255, 255 ,255)",
-    }
-  }
-
   render() {
     return (
       <div className={styles.content}>
