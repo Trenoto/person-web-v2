@@ -31,13 +31,13 @@ export default class AboutPage extends Component {
                         <IconFont style={{ fontSize: '100px', marginRight: '80px' }} type="icon-email" />
                     </Dropdown>
                     {/* <IconFont style={{ fontSize: '100px', marginRight: '80px' }} type="icon-Facebook" /> */}
-                    <a href="https://www.linkedin.com/in/hongtao-liu-885969139" target="_blank">
+                    <a href="https://www.linkedin.com/in/hongtao-liu-885969139" target="_blank" rel="noopener noreferrer">
                         <IconFont style={{ fontSize: '100px', marginRight: '80px' }} type="icon-social-linkedin" />
                     </a>
-                    <a href="https://www.instagram.com/faberald/" target="_blank">
+                    <a href="https://www.instagram.com/faberald/" target="_blank" rel="noopener noreferrer">
                         <IconFont style={{ fontSize: '100px', marginRight: '80px' }} type="icon-social-instagram" />
                     </a>
-                    <a href="https://github.com/Trenoto" target="_blank">
+                    <a href="https://github.com/Trenoto" target="_blank" rel="noopener noreferrer">
                         <IconFont style={{ fontSize: '100px', marginRight: '80px' }} type="icon-github" />
                     </a>
                     <Popover content={wechatContent}>

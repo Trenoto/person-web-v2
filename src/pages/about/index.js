@@ -25,7 +25,7 @@ export default class AboutPage extends Component {
                 <div className={styles.contact}>
                   <span><Icon type="mail" /> : <a href="mailto:faberaldliu@gmail.com">{formatMessage({ id: 'about.profile.email' })}</a></span>
                   <br />
-                  <span><Icon type="environment" /> : <a href="https://en.wikipedia.org/wiki/Wuhan" target="_blank">{formatMessage({ id: 'about.profile.location' })}</a></span>
+                  <span><Icon type="environment" /> : <a href="https://en.wikipedia.org/wiki/Wuhan" target="_blank" rel="noopener noreferrer">{formatMessage({ id: 'about.profile.location' })}</a></span>
                 </div>
               </div>
             </div>
