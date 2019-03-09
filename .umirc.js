@@ -1,6 +1,7 @@
 
 // ref: https://umijs.org/config/
 export default {
+  exportStatic: true,
   treeShaking: true,
   plugins: [
     // ref: https://umijs.org/plugin/umi-plugin-react.html
