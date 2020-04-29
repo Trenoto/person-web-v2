@@ -1,8 +1,8 @@
 export default {
     'about.profile.name': 'Hongtao Liu',
     'about.profile.title': 'Software Engineer',
-    'about.profile.email': 'faberaldliu@gmail.com',
-    'about.profile.location': 'Wuhan, China',
+    'about.profile.email': 'hongtao at nyu edu',
+    'about.profile.location': 'New York',
     'about.biography.interest.title': 'My Interests:',
     'about.biography.education.title': 'My Education:',
     'about.biography.education.juniorhighschool.name': 'Junior High School: Wuhan Foreign Languages School ',
