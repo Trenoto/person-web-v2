@@ -5,7 +5,8 @@ export default {
   treeShaking: true,
   plugins: [
     // ref: https://umijs.org/plugin/umi-plugin-react.html
-    ['umi-plugin-react', {
+    ['umi-plugin-react', 
+     'umi-plugin-gh-pages',{
       antd: true,
       dva: false,
       dynamicImport: true,
