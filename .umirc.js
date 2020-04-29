@@ -1,6 +1,8 @@
 
 // ref: https://umijs.org/config/
 export default {
+  base: '/person-web-v2/',
+  publicPath: '/person-web-v2/',
   exportStatic: true,
   treeShaking: true,
   plugins: [
