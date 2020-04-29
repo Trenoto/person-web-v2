@@ -11,38 +11,42 @@ export default class AboutPage extends Component {
   render() {
     return (
       <div className={styles.content}>
-        <Row gutter={24}>
-          <Col span={6} className={styles.profile}>
+        <Row type="flex">
+          <Col md={6} className={styles.profile}>
             <div className={styles.profileContent}>
               <Avatar size={165} src={avater} />
               <div className={styles.des}>
                 <div className={styles.name}>
-                  <span>{formatMessage({ id: 'about.profile.name' })}</span>
+                  <h1><span>{formatMessage({ id: 'about.profile.name' })}</span></h1>
                 </div>
                 <div className={styles.title}>
                   <span>{formatMessage({ id: 'about.profile.title' })}</span>
                 </div>
                 <div className={styles.contact}>
-                  <span><Icon type="mail" /> : <a href="mailto:faberaldliu@gmail.com">{formatMessage({ id: 'about.profile.email' })}</a></span>
+                  <span><Icon type="mail" /> : <a href="mailto:hongtao@nyu.edu">{formatMessage({ id: 'about.profile.email' })}</a></span>
                   <br />
-                  <span><Icon type="environment" /> : <a href="https://en.wikipedia.org/wiki/Wuhan" target="_blank" rel="noopener noreferrer">{formatMessage({ id: 'about.profile.location' })}</a></span>
+                  <span><Icon type="environment" /> : <a href="https://en.wikipedia.org/wiki/New_York_City" target="_blank" rel="noopener noreferrer">{formatMessage({ id: 'about.profile.location' })}</a></span>
                 </div>
               </div>
             </div>
           </Col>
-          <Col span={18} className={styles.biograhy}>
-            <div className={styles.tech}>
+          <Col md={18} className={styles.biograhy}>
+              <div className={styles.rightBlockOne}>
+                  <p styles={{textAlign: 'left'}}>MS Candidates in Computing, Entrepreneurship and Innovation<br/>New York University<br/>Courant Institue of Mathmatical Sciences</p>
+                  <p styles={{textAlign: 'left'}}>I come from <a href="https://en.wikipedia.org/wiki/New_York_City" target="_blank" rel="noopener noreferrer">Wuhan, China</a>.<br/>I recieved my bachelor's degree in computer science from University of California, Irvine.<br/>I am now running a startup with a group of talented people.</p>
+              </div>
+            {/* <div className={styles.tech}>
               <p style={{ textAlign: 'left', fontSize: '20px' }}>{formatMessage({ id: 'about.biography.interest.title' })}</p>
               <Row gutter={16}>
-                <Col span={6}>
+                <Col md={2} xl={6}>
                   <Card bordered={true} cover={<img alt="spring" src={springLogo} style={{ marginTop: 20}} />} style={{ padding: 40, height: 180 }}>
                   </Card>
                 </Col>
-                <Col span={6}>
+                <Col md={2} xl={6}>
                   <Card bordered={true} cover={<img alt="react" src={reactLogo} style={{ marginTop: 20}} />} style={{ padding: 40, height: 180 }}>
                   </Card>
                 </Col>
-                <Col span={6}>
+                <Col md={2} xl={6}>
                   <Card bordered={true} cover={<img alt="react" src={mysqlLogo} />} style={{ padding: 40, height: 180 }}>
                   </Card>
                 </Col>
@@ -58,7 +62,7 @@ export default class AboutPage extends Component {
                   <Timeline.Item dot={<Icon type="clock-circle" style={{ fontSize: '16px'}} />}>{formatMessage({ id: 'about.biography.education.graduateschool.name' })}<Icon type="environment" />{formatMessage({ id: 'about.biography.education.graduateschool.location' })}</Timeline.Item>
                 </Timeline>
               </div>
-            </div>
+            </div> */}
           </Col>
         </Row>
       </div>
